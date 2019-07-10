@@ -63,7 +63,7 @@ namespace lab_37_WPF_grid_click
                         break;
                 }
 
-                Grid.SetColumn(b, 1%3);
+                Grid.SetColumn(b, i%3);
                 Grid.SetRow(b, i/3);
                 //var delegate void MyDelegate(object sender, EventArgs e)
                 //{

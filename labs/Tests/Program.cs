@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Tests
@@ -184,6 +185,51 @@ namespace Tests
                 result += item;
             }
             return result;
+        }
+
+        public static int Snap_Lab_02(int n1, int n2, int n3, int n4, int n5)
+        {
+            ArrayList numbers = new ArrayList();
+            numbers.Add(n1);
+            numbers.Add(n2);
+            numbers.Add(n3);
+            numbers.Add(n4);
+            numbers.Add(n5);
+
+            var arr = new int[5];
+            List<int> list = new List<int>();
+            var queue = new Queue<int>();
+            var stack = new Stack<int>();
+            var dict = new Dictionary<int, int>();
+
+            var count = 0;
+            int total = 0;
+            foreach (int i in numbers)
+            {
+                arr[count] = i * 4;
+                count++;
+            }
+            foreach (int i in arr)
+            {
+                list.Add(i * 4);
+            }
+            foreach (int i in list)
+            {
+                queue.Enqueue(i * 4);
+            }
+            foreach (int i in queue)
+            {
+                stack.Push(i * 4);
+            }
+            foreach (int i in stack)
+            {
+                dict.Add(i, i * 4);
+            }
+            foreach (var val in dict.Keys)
+            {
+                total += dict[val];
+            }
+            return total;
         }
     }
     // Create a Cat class with string Name and int Age.Have a Constructor.

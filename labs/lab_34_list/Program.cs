@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 
 namespace lab_34_list
 {
@@ -145,9 +146,18 @@ namespace lab_34_list
             // dont do a test just code
 
 
+            Console.WriteLine("\n\nArrayList\n\n");
+            var objectList = new ArrayList();
+            objectList.Add(10);
+            objectList.AddRange(new int[] { 10, 20, 30, 40 });
+            objectList.Add("hi there");
+            objectList.Add(true);
+            objectList.Add(DateTime.Now);
 
-
-
+            foreach(var item in objectList)
+            {
+                Console.WriteLine($"{item.GetType(),-20}{item}");
+            }
 
 
         }

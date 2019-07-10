@@ -47,7 +47,7 @@ namespace lab_32_3_cats_in_order_of_age
             catAgeArray[1] = cat02.Age;
             catAgeArray[2] = cat03.Age;
 
-            foreach(var age in cats)
+            foreach(var age in catAgeArray )
             {
 
             }

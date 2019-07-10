@@ -1,0 +1,36 @@
+﻿<Window x:Class="lab_48_business_search.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_48_business_search"
+        mc:Ignorable="d"
+        Title="Northwind Searcj" Height="Auto" Width="Auto" FontSize="25">
+    <Grid Background="BlanchedAlmond">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" HorizontalContentAlignment="Center" Content="Northwind Search" />
+        <TabControl x:Name="MainTab" Background="Beige" Grid.Row="1" Grid.ColumnSpan="2" >
+            <TabItem x:Name="CustomerTab"  Header="Customers">
+                <TabPanel Grid.Row="1" Grid.Column="3" >
+                    <ListBox x:Name="Customers" MinWidth="700"/>
+                </TabPanel>
+            </TabItem>
+            <TabItem x:Name="ProductTab" Header="Products">
+                <TabPanel Grid.Row="1" Grid.Column="3" >
+                    <ListBox x:Name="Products" MinWidth="700"/>
+                </TabPanel>
+            </TabItem>
+        </TabControl>
+        <TextBox x:Name="Search" Text="Search"  Grid.Column="2" Width="250"  Height="30" HorizontalAlignment="Right" IsMouseDirectlyOverChanged="Search_IsMouseDirectlyOverChanged"  VerticalAlignment="Center" KeyUp="Search_KeyUp" TextChanged="Search_TextChanged" />
+        <Button x:Name="SearchButton" Content="Submit" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="SearchButton_Click" />
+        <ComboBox x:Name="CountryBox" Grid.Row="1" Grid.Column="3" SelectionChanged="CountryBox_SelectionChanged" />
+    </Grid>
+</Window>

@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using lab_22_first_test;
 using Tests;
+using System.Collections;
 
 namespace Tests
 {
@@ -40,7 +41,7 @@ namespace Tests
             Assert.AreEqual(actual, expected);
         }
 
-        [TestCase(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }, 1)]
+        [TestCase(new int[] { 10, 20, 30, 40}, 1012)]
         public void Mega_Multiple_Coding_Loops(int[] myArray, int expected)
         {
 
@@ -91,6 +92,12 @@ namespace Tests
             var actual = Eng35Tests.Array_Loop_Queue_Stack(arr);
             Assert.AreEqual(expected, actual);
         }
-        
+
+        [TestCase(5,6,7,8,9,35840)]
+        public void Snap_Lab_02(int n1, int n2, int n3, int n4, int n5, int expected)
+        {
+            var actual = Eng35Tests.Snap_Lab_02(n1, n2, n3, n4, n5);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

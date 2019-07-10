@@ -1,0 +1,83 @@
+﻿<Window x:Class="lab_46_panels.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab_46_panels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="Auto" Width="Auto" Background="#eee" FontSize="20">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Label x:Name="Stack" Content="Stack Panel" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center" Background="#ddd"/>
+        <Label x:Name="Dock" Content="Dock Panel" Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Center" Background="#ddd"/>
+        <Label x:Name="Wrap" Content="Wrap Panel" Grid.Row="0" Grid.Column="2" HorizontalContentAlignment="Center" Background="#ddd"/>
+        <Label x:Name="Tabbed" Content="Tabbed Panel" Grid.Row="0" Grid.Column="3" HorizontalContentAlignment="Center" Background="#ddd"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="1">
+            <StackPanel Grid.Column="0" Grid.Row="1" Background="AliceBlue" Orientation="Vertical">
+                <Button Background="BlanchedAlmond" Content="Button"/>
+                <Button Background="BlanchedAlmond" Content="Button"/>
+                <Button Background="BlanchedAlmond" Content="Button"/>
+                <Button Background="BlanchedAlmond" Content="Button"/>
+                <RichTextBox />
+                <TextBox Text="Enter plain text" />
+                <Label Content="label" />
+                <TextBlock Text="TextBlock = plain text" />
+                <Button Background="BlanchedAlmond" Content="Button"/>
+                <Button Background="BlanchedAlmond" Content="Button"/>
+                <Button Background="BlanchedAlmond" Content="Button"/>
+                <Button Background="BlanchedAlmond" Content="Button"/>
+                <RichTextBox />
+                <TextBox Text="Enter plain text" />
+                <Label Content="label" />
+                <TextBlock Text="TextBlock = plain text" />
+            </StackPanel>
+        </ScrollViewer>
+        <DockPanel Grid.Column="1" Grid.Row="1" Background="#dfd" LastChildFill="True">
+            <Button Background="Aquamarine" DockPanel.Dock="Top" Content="Top" />
+            <Button Background="Aquamarine" DockPanel.Dock="Bottom" Content="Bottom" />
+            <Button Background="Aquamarine" DockPanel.Dock="Left" Content="Left" />
+            <Button Background="Aquamarine" DockPanel.Dock="Right" Content="Right" />
+            <Button Background="Aquamarine" Content="Center" />
+        </DockPanel>
+        <WrapPanel Grid.Column="2" Grid.Row="1" Background="#ded">
+            <Button Background="Orchid" Width="30" Height="30" Margin="4"/>
+            <Button Background="Orchid" Width="30" Height="30" Margin="4"/>
+            <Button Background="Orchid" Width="30" Height="30" Margin="4"/>
+            <Button Background="Orchid" Width="30" Height="30" Margin="4"/>
+            <Button Background="Orchid" Width="30" Height="30" Margin="4"/>
+            <Button Background="Orchid" Width="30" Height="30" Margin="4"/>
+            <Button Background="Orchid" Width="30" Height="30" Margin="4"/>
+            <Button Background="Orchid" Width="30" Height="30" Margin="4"/>
+            <Button Background="Orchid" Width="30" Height="30" Margin="4"/>
+            <Button Background="Orchid" Width="30" Height="30" Margin="4"/>
+        </WrapPanel>
+        <TabControl x:Name="MainTab" Background="Beige" Grid.Row="1" Grid.Column="3" >
+            <TabItem Header="One">
+                <TabPanel Grid.Row="1" Grid.Column="3" >
+                    <Label Content="1" />
+                </TabPanel>
+            </TabItem>
+            <TabItem Header="Two">
+                <TabPanel Grid.Row="1" Grid.Column="3" >
+                    <Label Content="2" />
+                </TabPanel>
+            </TabItem>
+            <TabItem Header="Three">
+                <TabPanel Grid.Row="1" Grid.Column="3" >
+                    <Label Content="3" />
+                </TabPanel>
+            </TabItem>
+            <TabPanel Grid.Row="1" Grid.Column="3" ></TabPanel>
+            <TabPanel Grid.Row="1" Grid.Column="3" ></TabPanel>
+        </TabControl>
+    </Grid>
+</Window>
