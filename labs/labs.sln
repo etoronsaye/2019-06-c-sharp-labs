@@ -117,6 +117,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snap_lab_02_5_loops", "snap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_48_business_search", "lab_48_business_search\lab_48_business_search.csproj", "{5D5946C9-CFDD-4ADA-B74F-1D3CD7F85AD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_49_reference_value_types", "lab_49_reference_value_types\lab_49_reference_value_types.csproj", "{39524688-20AB-44AB-8F39-F36BC57FD48F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_50_async", "lab_50_async\lab_50_async.csproj", "{846E8AC1-5171-44EF-8735-96CDF0006DC9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -351,6 +355,14 @@ Global
 		{5D5946C9-CFDD-4ADA-B74F-1D3CD7F85AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D5946C9-CFDD-4ADA-B74F-1D3CD7F85AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D5946C9-CFDD-4ADA-B74F-1D3CD7F85AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39524688-20AB-44AB-8F39-F36BC57FD48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39524688-20AB-44AB-8F39-F36BC57FD48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39524688-20AB-44AB-8F39-F36BC57FD48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39524688-20AB-44AB-8F39-F36BC57FD48F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{846E8AC1-5171-44EF-8735-96CDF0006DC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{846E8AC1-5171-44EF-8735-96CDF0006DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{846E8AC1-5171-44EF-8735-96CDF0006DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{846E8AC1-5171-44EF-8735-96CDF0006DC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

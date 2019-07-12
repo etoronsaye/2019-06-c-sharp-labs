@@ -11,26 +11,33 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Label Grid.Column="1" HorizontalContentAlignment="Center" Content="Northwind Search" />
-        <TabControl x:Name="MainTab" Background="Beige" Grid.Row="1" Grid.ColumnSpan="2" >
+        <Label Grid.Column="1" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" Content="Northwind Search" />
+        <TabControl x:Name="MainTab" Background="Beige" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" >
             <TabItem x:Name="CustomerTab"  Header="Customers">
-                <TabPanel Grid.Row="1" Grid.Column="3" >
+                <TabPanel>
                     <ListBox x:Name="Customers" MinWidth="700"/>
                 </TabPanel>
             </TabItem>
             <TabItem x:Name="ProductTab" Header="Products">
-                <TabPanel Grid.Row="1" Grid.Column="3" >
+                <TabPanel>
                     <ListBox x:Name="Products" MinWidth="700"/>
                 </TabPanel>
             </TabItem>
         </TabControl>
-        <TextBox x:Name="Search" Text="Search"  Grid.Column="2" Width="250"  Height="30" HorizontalAlignment="Right" IsMouseDirectlyOverChanged="Search_IsMouseDirectlyOverChanged"  VerticalAlignment="Center" KeyUp="Search_KeyUp" TextChanged="Search_TextChanged" />
-        <Button x:Name="SearchButton" Content="Submit" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="SearchButton_Click" />
-        <ComboBox x:Name="CountryBox" Grid.Row="1" Grid.Column="3" SelectionChanged="CountryBox_SelectionChanged" />
+        <TextBox x:Name="Search" Text="Search"  Grid.Column="3" Grid.ColumnSpan="2" Width="250"  Height="30" VerticalAlignment="Center" IsMouseDirectlyOverChanged="Search_IsMouseDirectlyOverChanged"  KeyUp="Search_KeyUp" TextChanged="Search_TextChanged" />
+        <TextBlock x:Name="Description" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Background="NavajoWhite" />
+        <Button x:Name="SearchButton" Content="Go" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="SearchButton_Click"/>
+        <ComboBox x:Name="CountryBox" Grid.Row="2" Grid.Column="4" SelectionChanged="CountryBox_SelectionChanged" />
+        <Slider x:Name="PriceRange" Grid.Row="1" Grid.Column="4" TickFrequency="10" TickPlacement="Both" VerticalAlignment="Center" Width="200" ValueChanged="PriceRange_ValueChanged"/>
     </Grid>
 </Window>
