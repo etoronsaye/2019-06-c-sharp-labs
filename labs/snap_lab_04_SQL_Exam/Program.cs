@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace snap_lab_04_SQL_Exam
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            using (var db = new NorthwindEntities1())
+            {
+                // 1.1	Write a query that lists all Customers in either Paris or London. Include Customer ID, Company Name and all address fields.
+                Console.WriteLine("==== 1.1 =====\n");
+                var custLonPar = from c in db.Customers where c.City == "London" || c.City == "Paris" select c;
+                foreach (var c in custLonPar)
+                {
+                    var address = c.Address + ", " + c.City + ", " + c.Country;
+                    Console.WriteLine($"{c.CustomerID,-10}{c.ContactName,-20}{c.CompanyName,-25}{c.Address, -30}{c.City, -10}{c.PostalCode, -10}{c.Country}");
+                }
+
+                // 1.2	List all products stored in bottles.  
+                Console.WriteLine("\n==== 1.2 =====\n");
+                var prod = from p in db.Products where p.QuantityPerUnit.Contains("bottle") select p;
+                foreach (var p in prod)
+                {
+                    Console.WriteLine($"{p.ProductName, -35} {p.QuantityPerUnit}");
+                }
+
+                // 1.3	Repeat question above, but add in the Supplier Name and Country.
+                Console.WriteLine("\n==== 1.3 =====\n");
+                var prod2 = from product in db.Products
+                            join supplier in db.Suppliers on product.SupplierID equals supplier.SupplierID
+                            where product.QuantityPerUnit.Contains("bottle")
+                            select product;
+                foreach (var p in prod2)
+                {
+                    Console.WriteLine($"{p.ProductName,-35}{p.QuantityPerUnit, -25}{p.Supplier.CompanyName, -35}{p.Supplier.Country}");
+                }
+
+                // 1.4	Write an SQL Statement that shows how many products there are in each category. Include Category Name in result set and list the highest number first.
+                Console.WriteLine("\n==== 1.4 =====\n");
+                var cat = from p in db.Products
+                          join c in db.Categories on p.CategoryID equals c.CategoryID
+                          group c by c.CategoryName into Categories
+                          orderby Categories.Count() descending
+                          select new
+                          {
+                              Category = Categories.Key,
+                              Count = Categories.Count()
+                          };
+                foreach (var c in cat)
+                {
+                    Console.WriteLine($"Category: {c.Category,-25} No. of Products: {c.Count}");
+                }
+
+                // 1.5	List all UK employees using concatenation to join their title of courtesy, first name and last name together. Also include their city of residence.
+                Console.WriteLine("\n==== 1.5 =====\n");
+                var employ = from e in db.Employees where e.City == "London" select e;
+                foreach (var e in employ)
+                {
+                    var name = e.TitleOfCourtesy + " " + e.FirstName + " " + e.LastName;
+                    var address = e.City;
+                    Console.WriteLine($"Employee: {name,-25} {address}");
+                }
+
+                // 1.6	List Sales Totals for all Sales Regions (via the Territories table using 4 joins) with a Sales Total greater than 1,000,000. 
+                // Use rounding or FORMAT to present the numbers. 
+                Console.WriteLine("\n==== 1.6 =====\n");
+                Console.WriteLine("One table missing from .edmx");
+                /*var salesTotalsRegions = from od in db.Order_Details
+                                         join o in db.Orders on od.OrderID equals o.OrderID
+                                         join et in db.empl on o.EmployeeID equals et.EmployeeID
+                                         join t in db.Territories on et.TerritoryID equals t.TerritoryID
+                                         join r in db.Regions on t.RegionID equals r.RegionID  select od;*/
+
+                // 1.7	Count how many Orders have a Freight amount greater than 100.00 and either USA or UK as Ship Country.
+                Console.WriteLine("\n==== 1.7 =====\n");
+                var freight = from o in db.Orders where o.Freight > 100 && (o.ShipCountry == "UK" || o.ShipCountry == "USA") select o;
+                var count = freight.Count();
+                Console.WriteLine($"Number of orders with Freight > 100 and Ship Country, USA/UK: {count}");
+
+                // 1.8	Write an SQL Statement to identify the Order Number of the Order with the highest amount of discount applied to that order.
+                Console.WriteLine("\n==== 1.8 =====\n");
+                var orders = from od in db.Order_Details select od;
+                var discountAmount = new List<decimal>();
+                foreach (var od in orders)
+                {
+                    discountAmount.Add((decimal)od.Discount * od.UnitPrice * od.Quantity);
+                }
+                var highestDiscount = discountAmount.Max();
+                Console.WriteLine($"Highest Discount: {highestDiscount}");
+            } 
+        }
+    }
+}

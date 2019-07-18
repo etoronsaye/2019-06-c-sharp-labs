@@ -99,5 +99,12 @@ namespace Tests
             var actual = Eng35Tests.Snap_Lab_02(n1, n2, n3, n4, n5);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestCase(1_000_000, 1_048_576)]
+        public void Rabbit_Explosion_B1(int i, double expected)
+        {
+            var actual = Eng35Tests.Rabbit_Explosion_B1(i);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

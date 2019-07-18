@@ -113,13 +113,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_46_panels", "lab_46_pan
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snaplab_tab_panel", "snaplab_tab_panel\snaplab_tab_panel.csproj", "{3E24EB71-D506-43B9-9024-E2CAD7121D84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snap_lab_02_5_loops", "snap_lab_02_5_loops\snap_lab_02_5_loops.csproj", "{542FE38D-7709-44EB-8965-2E047863BF69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "snap_lab_02_5_loops", "snap_lab_02_5_loops\snap_lab_02_5_loops.csproj", "{542FE38D-7709-44EB-8965-2E047863BF69}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_48_business_search", "lab_48_business_search\lab_48_business_search.csproj", "{5D5946C9-CFDD-4ADA-B74F-1D3CD7F85AD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_49_reference_value_types", "lab_49_reference_value_types\lab_49_reference_value_types.csproj", "{39524688-20AB-44AB-8F39-F36BC57FD48F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_49_reference_value_types", "lab_49_reference_value_types\lab_49_reference_value_types.csproj", "{39524688-20AB-44AB-8F39-F36BC57FD48F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_50_async", "lab_50_async\lab_50_async.csproj", "{846E8AC1-5171-44EF-8735-96CDF0006DC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_50_async", "lab_50_async\lab_50_async.csproj", "{846E8AC1-5171-44EF-8735-96CDF0006DC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_51_entity_CRUD_app", "lab_51_entity_CRUD_app\lab_51_entity_CRUD_app.csproj", "{5186F4D7-B83F-4F0E-B930-012706AC0D7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snap_lab_03_WPF_CRUD", "snap_lab_WPF_CRUD\snap_lab_03_WPF_CRUD.csproj", "{4D1720D0-D608-4F03-A3B4-4CFE41AF9BE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_52_LINQ_simple", "lab_52_LINQ_simple\lab_52_LINQ_simple.csproj", "{0BECF355-8914-4A57-941D-B84016A822BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_53_LINQ", "lab_53_LINQ\lab_53_LINQ.csproj", "{D4D0201E-147B-4471-9C27-99A380DF34AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snap_lab_04_SQL_Exam", "snap_lab_04_SQL_Exam\snap_lab_04_SQL_Exam.csproj", "{31416F1E-B979-4C11-A6E8-2907CBB68635}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_54_Mah_App", "lab_54_Mah_App\lab_54_Mah_App.csproj", "{F6AE22B1-194A-4D5F-9DF0-9B9414750768}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snap_lab_05_rabbit_explosion", "snap_lab_05_rabbit_explosion\snap_lab_05_rabbit_explosion.csproj", "{4451625C-54CF-42DD-A6FB-414AF58EEE4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_55_CSV_Word_Excel", "lab_55_CSV_Word_Excel\lab_55_CSV_Word_Excel.csproj", "{7C5A5825-9F20-4633-ABFD-856BF531325F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -363,6 +379,38 @@ Global
 		{846E8AC1-5171-44EF-8735-96CDF0006DC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{846E8AC1-5171-44EF-8735-96CDF0006DC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{846E8AC1-5171-44EF-8735-96CDF0006DC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5186F4D7-B83F-4F0E-B930-012706AC0D7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5186F4D7-B83F-4F0E-B930-012706AC0D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5186F4D7-B83F-4F0E-B930-012706AC0D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5186F4D7-B83F-4F0E-B930-012706AC0D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D1720D0-D608-4F03-A3B4-4CFE41AF9BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1720D0-D608-4F03-A3B4-4CFE41AF9BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1720D0-D608-4F03-A3B4-4CFE41AF9BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1720D0-D608-4F03-A3B4-4CFE41AF9BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BECF355-8914-4A57-941D-B84016A822BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BECF355-8914-4A57-941D-B84016A822BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BECF355-8914-4A57-941D-B84016A822BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BECF355-8914-4A57-941D-B84016A822BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D0201E-147B-4471-9C27-99A380DF34AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D0201E-147B-4471-9C27-99A380DF34AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D0201E-147B-4471-9C27-99A380DF34AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D0201E-147B-4471-9C27-99A380DF34AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31416F1E-B979-4C11-A6E8-2907CBB68635}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31416F1E-B979-4C11-A6E8-2907CBB68635}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31416F1E-B979-4C11-A6E8-2907CBB68635}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31416F1E-B979-4C11-A6E8-2907CBB68635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6AE22B1-194A-4D5F-9DF0-9B9414750768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6AE22B1-194A-4D5F-9DF0-9B9414750768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6AE22B1-194A-4D5F-9DF0-9B9414750768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6AE22B1-194A-4D5F-9DF0-9B9414750768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4451625C-54CF-42DD-A6FB-414AF58EEE4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4451625C-54CF-42DD-A6FB-414AF58EEE4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4451625C-54CF-42DD-A6FB-414AF58EEE4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4451625C-54CF-42DD-A6FB-414AF58EEE4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C5A5825-9F20-4633-ABFD-856BF531325F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C5A5825-9F20-4633-ABFD-856BF531325F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C5A5825-9F20-4633-ABFD-856BF531325F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C5A5825-9F20-4633-ABFD-856BF531325F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

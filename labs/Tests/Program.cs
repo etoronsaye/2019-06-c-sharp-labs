@@ -231,6 +231,22 @@ namespace Tests
             }
             return total;
         }
+
+        public static double Rabbit_Explosion_B1(int population)
+        {
+            double currentPopulation = 0;
+            var i = 0;
+
+            while (currentPopulation < population)
+            {
+                currentPopulation = Math.Pow(2, i);
+                //rabbits.Add(Math.Pow(2, i));
+                //Console.WriteLine($"Time: {i} seconds Rabbits: {currentPopulation}");
+                i++;
+            }
+            //Console.WriteLine($"Population is {currentPopulation} after {i} seconds");
+            return currentPopulation;
+        }
     }
     // Create a Cat class with string Name and int Age.Have a Constructor.
     public class Cat
