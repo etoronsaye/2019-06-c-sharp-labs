@@ -12,7 +12,7 @@
         <Controls:MetroAnimatedSingleRowTabControl Margin="0,182,0,10" HorizontalAlignment="Left" Width="1192" >
             <Controls:MetroTabItem x:Name="CustomerTab"  Header="Existing Customers">
                 <DockPanel>
-                    <DataGrid x:Name="CustomerList" SelectionChanged="CustomerList_SelectionChanged" MaxWidth="1000" Grid.Column="0"/>
+                    <DataGrid x:Name="CustomerList" SelectionChanged="CustomerList_SelectionChanged" />
                 </DockPanel>
             </Controls:MetroTabItem>
             <TabItem x:Name="AddCustomerTab" Header="Add Customer">
@@ -37,7 +37,7 @@
             </Controls:Flyout.Background>
             <Canvas>
                 <Image Source="images/tracey.jpg" Width="450" Height="87" Stretch="Fill" />
-                <Label x:Name="LabelID" Background="SlateGray" Content="ID" HorizontalContentAlignment="Center" Height="35" RenderTransformOrigin="9.14,0.973" Canvas.Left="120" Canvas.Top="265"/>
+                <Label x:Name="LabelID" Background="SlateGray" Content="  " HorizontalContentAlignment="Center" Height="35" RenderTransformOrigin="9.14,0.973" Canvas.Left="120" Canvas.Top="265"/>
                 <Label x:Name="LabelName" Grid.Column="1" Background="SlateGray" Content="Name" HorizontalContentAlignment="Center" Height="35" RenderTransformOrigin="9.14,0.973" Canvas.Left="120" Canvas.Top="335"/>
                 <Label x:Name="LabelCompany" Grid.Column="1" Background="SlateGray" Content="Company" HorizontalContentAlignment="Center" Height="35" RenderTransformOrigin="9.14,0.973" Canvas.Left="120" Canvas.Top="402"/>
                 <Label x:Name="LabelCity" Grid.Column="1" Background="SlateGray" Content="City" HorizontalContentAlignment="Center" Height="34" RenderTransformOrigin="9.14,0.973" Canvas.Left="120" Canvas.Top="470"/>

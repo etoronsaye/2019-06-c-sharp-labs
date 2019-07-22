@@ -78,7 +78,6 @@ namespace Tests
         Cats Cat03 = new Cats("cat03", 4);
         Cats[] catArray; // = { Cat01, Cat02, Cat03 };
 
-
         [TestCase(2,10,4,2)]
         public void Divisor(int x, int y, int divisor, int expected)
         {
@@ -104,6 +103,22 @@ namespace Tests
         public void Rabbit_Explosion_B1(int i, double expected)
         {
             var actual = Eng35Tests.Rabbit_Explosion_B1(i);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(new int[] { 1, 1, 1},2,2)]
+        [TestCase(new int[] { 1, 2, 3, 4, 3, 2 },5,2)]
+        public void Sum_Subarray(int []nums, int k, int expected)
+        {
+            var actual = Eng35Tests.SubarraySum(nums, k);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(new int[] { 10, 20, 30, 40,50,60,70,80,90,100 }, 1825)]
+        [TestCase(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 }, 1330)]
+        public void Loop_Dictionary(int[] arr, int expected)
+        {
+            var actual = Eng35Tests.Loop_Dictionary(arr);
             Assert.AreEqual(expected, actual);
         }
     }

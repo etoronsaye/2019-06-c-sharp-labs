@@ -42,5 +42,10 @@ namespace lab_54_Mah_App
             w1.ShowDialog();
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            FLy.IsOpen = true;
+        }
     }
 }

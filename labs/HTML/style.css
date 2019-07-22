@@ -1,0 +1,32 @@
+body{
+    background-color: burlywood;
+    font-family: Calibri;
+}
+h1 {
+    text-align: center;
+    border: groove #525054;
+    width: 50%;
+    padding: 20px;
+}
+img{
+    display: block;
+    position: center;
+}
+button {
+    background-color: slategray;
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    text-shadow: 5px 5px 5px #333;
+    box-shadow: 10px 10px 10px #333;
+    border-radius: 15px
+}
+button:hover{
+    border: 5px solid grey;
+    background-color: darkslategrey;
+    width: 110px;
+    height: 55px;
+}
+button:active{
+    background-color: red;
+}

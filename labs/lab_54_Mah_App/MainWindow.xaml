@@ -7,12 +7,30 @@
                       xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:local="clr-namespace:lab_54_Mah_App"
                       mc:Ignorable="d"
-        Title="Sanru's Lesson" Height="450" Width="800">
+        Title="Sanru's Lesson" Height="450" Width="800" Icon="images/download.png">
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button Content="Tracey" />
+            <StackPanel Orientation="Horizontal" >
+                <iconPacks:PackIconModern Kind="User" Width="20" Height="20" Margin="0 5 0 0"/>
+                <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="Becky" />
+            </StackPanel>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
     <Grid>
+        <Controls:Flyout x:Name="FLy" Width="450" Header="Area51" Position="Right">
+            <Controls:Flyout.Background>
+                <SolidColorBrush Color="#FF2b2b2b" Opacity="0.75" />
+            </Controls:Flyout.Background>
+            <Canvas>
+                <Image Source="images/tracey.jpg" Width="450" Height="87" Stretch="Fill"/>
+            </Canvas>
+        </Controls:Flyout>
         <Controls:FlipView x:Name="Flip" Foreground="{DynamicResource WhiteBrush}" Height="200" SelectionChanged="Flip_SelectionChanged">
             <Controls:FlipView.Items>
-                <Grid Background="BlanchedAlmond" Margin="-2,-114,2,114">
+                <Grid Background="BlanchedAlmond" Margin="-2,-114,2,108">
                     <iconPacks:PackIconModern Width ="60" Height="60" HorizontalAlignment="Center" VerticalAlignment="Center" Kind="Cupcake" Margin="702,10,22,122"/>
+                    <Button Content="Button" HorizontalAlignment="Left" Margin="94,55,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
                 </Grid>
                 <Grid Background="BlanchedAlmond" Margin="-2,-114,2,114">
                     <iconPacks:PackIconModern Width ="60" Height="60" HorizontalAlignment="Center" VerticalAlignment="Center" Kind="BeerGuinness" Margin="702,10,22,122"/>

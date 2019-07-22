@@ -247,6 +247,76 @@ namespace Tests
             //Console.WriteLine($"Population is {currentPopulation} after {i} seconds");
             return currentPopulation;
         }
+
+        public static int SubarraySum(int[] nums, int k)
+        {             
+            int count = 0;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int sum = 0;
+                sum += nums[i];
+                if (sum == k)
+                {
+                    count++;
+                }
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    sum += nums[j];
+                    if (sum == k)
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+
+        public static int Loop_Dictionary(int[] arr)
+        {
+            int counter = 1;
+            int[] numArray2 = new int[10];
+
+            for (int i = 0; i < 10; i++)
+            {
+                numArray2[i] = arr[i] + counter;
+                counter++; 
+            }
+
+            var queue = new Queue<int>();
+            foreach (var q in numArray2)
+            {
+                queue.Enqueue(q + counter);
+                counter++;
+            }
+
+            var stack = new Stack<int>();
+            foreach (var s in queue)
+            {
+                stack.Push(s + counter);
+                counter++;
+            }
+
+            var dictionary = new Dictionary<int, int>();
+            foreach (var d in stack)
+            {
+                dictionary.Add(d, d + counter);
+                counter++;
+            }
+
+            var nums = new List<int>();
+            foreach (var n in dictionary.Values)
+            {
+                nums.Add(n + counter);
+                counter++;
+            }
+
+            int result = 0;
+            foreach (var item in nums)
+            {
+                result += item;
+            }
+            return result;
+        }
     }
     // Create a Cat class with string Name and int Age.Have a Constructor.
     public class Cat
@@ -272,7 +342,10 @@ namespace Tests
             this.Age = age;
         }
     }
-    
-    
 
+
+    //if (nums == null || nums.Length == 0)
+    //{
+    //    return 0;
+    //}
 }
