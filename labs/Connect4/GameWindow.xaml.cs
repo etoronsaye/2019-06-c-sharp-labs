@@ -49,14 +49,19 @@ namespace Connect4
         }
 
 
-        static int counter = 0;
+        static int counterC1 = 0;
+        static int counterC2 = 0;
+        static int counterC3 = 0;
+        static int counterC4 = 0;
+        static int counterC5 = 0;
+        static int counterC6 = 0;
+
         private bool turn = true;
         private void C1_Click(object sender, RoutedEventArgs e)
         {
             Button c1 = (Button)sender;
-            
 
-            if (counter == 0)
+            if (counterC1 == 0)
             {
                 if (turn)
                 {
@@ -68,7 +73,7 @@ namespace Connect4
                 }
                 turn = !turn;
             }
-            if (counter == 1)
+            if (counterC1 == 1)
             {
                 if (turn)
                 {
@@ -80,7 +85,7 @@ namespace Connect4
                 }
                 turn = !turn;
             }
-            if (counter == 2)
+            if (counterC1 == 2)
             {
                 if (turn)
                 {
@@ -92,7 +97,7 @@ namespace Connect4
                 }
                 turn = !turn;
             }
-            if (counter == 3)
+            if (counterC1 == 3)
             {
                 if (turn)
                 {
@@ -104,7 +109,7 @@ namespace Connect4
                 }
                 turn = !turn;
             }
-            if (counter == 4)
+            if (counterC1 == 4)
             {
                 if (turn)
                 {
@@ -116,7 +121,7 @@ namespace Connect4
                 }
                 turn = !turn;
             }
-            if (counter == 5)
+            if (counterC1 == 5)
             {
                 if (turn)
                 {
@@ -128,7 +133,100 @@ namespace Connect4
                 }
                 turn = !turn;
             }
-            counter++;
+            counterC1++;
+        }
+
+        private void C2_Click(object sender, RoutedEventArgs e)
+        {
+            Button c2 = (Button)sender;
+
+            if (counterC2 == 0)
+            {
+                if (turn)
+                {
+                    C2P1.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C2P1.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC2 == 1)
+            {
+                if (turn)
+                {
+                    C2P2.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C2P2.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC2 == 2)
+            {
+                if (turn)
+                {
+                    C2P3.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C2P3.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC2 == 3)
+            {
+                if (turn)
+                {
+                    C2P4.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C2P4.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC2 == 4)
+            {
+                if (turn)
+                {
+                    C2P5.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C2P5.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC2 == 5)
+            {
+                if (turn)
+                {
+                    C2P6.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C2P6.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            counterC2++;
+        }
+
+        private void C3_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void C4_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void C5_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
