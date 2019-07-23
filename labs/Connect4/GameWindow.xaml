@@ -25,104 +25,80 @@
         <Label x:Name="PlayerOneScore" Content="Label" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="127,10,0,0" Height="20" Width="50"/>
         <Label x:Name="PlayerTwoScore" Content="Label" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="127,54,0,0" Height="20" Width="50"/>
         <Button Content="Quit" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Left" Margin="57,47,0,0" VerticalAlignment="Top" Width="75"/>
-        <Grid x:Name="GameBoard" Width="300" Height="300" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" ShowGridLines="True">
+        <Grid x:Name="GameBoardGrid" Width="300" Height="300" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" ShowGridLines="True">
             <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-            <Rectangle Grid.ColumnSpan="6" Fill="#FFF4F4F5" Height="300" Grid.RowSpan="6" Stroke="Black" Width="300"/>
-        </Grid>
-        <Grid x:Name="PlayerOneTiles" Width="100" Height="300"  Grid.Row="1" Grid.RowSpan="4" Margin="26,18,173,17">
-            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition Height="50" />
+                <RowDefinition />
             </Grid.RowDefinitions>
-            <Rectangle Grid.ColumnSpan="2" Fill="#FFF4F4F5" Height="300" Grid.RowSpan="6" Stroke="Black" Width="100"/>
-            <Ellipse x:Name="P1B1" Grid.Row="0" Grid.Column="0" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="0" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P1B2" Grid.Row="0" Grid.Column="1" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="0" Grid.Column="1" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P1B3" Grid.Row="1" Grid.Column="0" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="1" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P1B4" Grid.Row="1" Grid.Column="1" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="1" Grid.Column="1" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P1B5" Grid.Row="2" Grid.Column="0" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="2" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P1B6" Grid.Row="2" Grid.Column="1" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="2" Grid.Column="1" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P1B7" Grid.Row="3" Grid.Column="0" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="3" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P1B8" Grid.Row="3" Grid.Column="1" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="3" Grid.Column="1" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P1B9" Grid.Row="4" Grid.Column="0" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="4" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P1B10" Grid.Row="4" Grid.Column="1" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="4" Grid.Column="1" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P1B11" Grid.Row="5" Grid.Column="0" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="5" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P1B12" Grid.Row="5" Grid.Column="1" Fill="BlanchedAlmond" Stroke="Black" />
-            <Button Grid.Row="5" Grid.Column="1" Click="Button_Click" Opacity="0" />
+            <Rectangle Grid.ColumnSpan="6" Fill="Honeydew" Height="300" Grid.RowSpan="6" Stroke="Black" Width="300"/>
+            <Ellipse x:Name="C1P6" Grid.Row="0" Grid.Column="0" Stroke="Black" />
+            <Ellipse x:Name="C2P6" Grid.Row="0" Grid.Column="1" Stroke="Black" />
+            <Ellipse x:Name="C3P6" Grid.Row="0" Grid.Column="2" Stroke="Black" />
+            <Ellipse x:Name="C4P6" Grid.Row="0" Grid.Column="3" Stroke="Black" />
+            <Ellipse x:Name="C5P6" Grid.Row="0" Grid.Column="4" Stroke="Black" />
+            <Ellipse x:Name="C6P6" Grid.Row="0" Grid.Column="5" Stroke="Black" />
+            <Ellipse x:Name="C1P5" Grid.Row="1" Grid.Column="0" Stroke="Black" />
+            <Ellipse x:Name="C2P5" Grid.Row="1" Grid.Column="1" Stroke="Black" />
+            <Ellipse x:Name="C3P5" Grid.Row="1" Grid.Column="2" Stroke="Black" />
+            <Ellipse x:Name="C4P5" Grid.Row="1" Grid.Column="3" Stroke="Black" />
+            <Ellipse x:Name="C5P5" Grid.Row="1" Grid.Column="4" Stroke="Black" />
+            <Ellipse x:Name="C6P5" Grid.Row="1" Grid.Column="5" Stroke="Black" />
+            <Ellipse x:Name="C1P4" Grid.Row="2" Grid.Column="0" Stroke="Black" />
+            <Ellipse x:Name="C2P4" Grid.Row="2" Grid.Column="1" Stroke="Black" />
+            <Ellipse x:Name="C3P4" Grid.Row="2" Grid.Column="2" Stroke="Black" />
+            <Ellipse x:Name="C4P4" Grid.Row="2" Grid.Column="3" Stroke="Black" />
+            <Ellipse x:Name="C5P4" Grid.Row="2" Grid.Column="4" Stroke="Black" />
+            <Ellipse x:Name="C6P4" Grid.Row="2" Grid.Column="5" Stroke="Black" />
+            <Ellipse x:Name="C1P3" Grid.Row="3" Grid.Column="0" Stroke="Black" />
+            <Ellipse x:Name="C2P3" Grid.Row="3" Grid.Column="1" Stroke="Black" />
+            <Ellipse x:Name="C3P3" Grid.Row="3" Grid.Column="2" Stroke="Black" />
+            <Ellipse x:Name="C4P3" Grid.Row="3" Grid.Column="3" Stroke="Black" />
+            <Ellipse x:Name="C5P3" Grid.Row="3" Grid.Column="4" Stroke="Black" />
+            <Ellipse x:Name="C6P3" Grid.Row="3" Grid.Column="5" Stroke="Black" />
+            <Ellipse x:Name="C1P2" Grid.Row="4" Grid.Column="0" Stroke="Black" />
+            <Ellipse x:Name="C2P2" Grid.Row="4" Grid.Column="1" Stroke="Black" />
+            <Ellipse x:Name="C3P2" Grid.Row="4" Grid.Column="2" Stroke="Black" />
+            <Ellipse x:Name="C4P2" Grid.Row="4" Grid.Column="3" Stroke="Black" />
+            <Ellipse x:Name="C5P2" Grid.Row="4" Grid.Column="4" Stroke="Black" />
+            <Ellipse x:Name="C6P2" Grid.Row="4" Grid.Column="5" Stroke="Black" />
+            <Ellipse x:Name="C1P1" Grid.Row="5" Grid.Column="0" Stroke="Black" />
+            <Ellipse x:Name="C2P1" Grid.Row="5" Grid.Column="1" Stroke="Black" />
+            <Ellipse x:Name="C3P1" Grid.Row="5" Grid.Column="2" Stroke="Black" />
+            <Ellipse x:Name="C4P1" Grid.Row="5" Grid.Column="3" Stroke="Black" />
+            <Ellipse x:Name="C5P1" Grid.Row="5" Grid.Column="4" Stroke="Black" />
+            <Ellipse x:Name="C6P1" Grid.Row="5" Grid.Column="5" Stroke="Black" />
         </Grid>
-        <Grid x:Name="PlayerTwoTiles" Width="100" Height="300" Grid.Row="1" Grid.RowSpan="4" Margin="171,19,28,17" RenderTransformOrigin="0.03,0.348" Grid.Column="1">
+        <Grid x:Name="Drop" HorizontalAlignment="Left" Height="40" Margin="149,48,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Rectangle Grid.ColumnSpan="2" Fill="#FFF4F4F5" Height="300" Grid.RowSpan="6" Stroke="Black" Width="100" />
-            <Ellipse x:Name="P2B1" Grid.Row="0" Grid.Column="0" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="0" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P2B2" Grid.Row="0" Grid.Column="1" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="0" Grid.Column="1" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P2B3" Grid.Row="1" Grid.Column="0" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="1" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P2B4" Grid.Row="1" Grid.Column="1" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="1" Grid.Column="1" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P2B5" Grid.Row="2" Grid.Column="0" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="2" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P2B6" Grid.Row="2" Grid.Column="1" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="2" Grid.Column="1" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P2B7" Grid.Row="3" Grid.Column="0" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="3" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P2B8" Grid.Row="3" Grid.Column="1" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="3" Grid.Column="1" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P2B9" Grid.Row="4" Grid.Column="0" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="4" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P2B10" Grid.Row="4" Grid.Column="1" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="4" Grid.Column="1" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P2B11" Grid.Row="5" Grid.Column="0" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="5" Grid.Column="0" Click="Button_Click" Opacity="0" />
-            <Ellipse x:Name="P2B12" Grid.Row="5" Grid.Column="1" Fill="LightSlateGray" Stroke="Black" />
-            <Button Grid.Row="5" Grid.Column="1" Click="Button_Click" Opacity="0" />
+            <Button x:Name="C1" Grid.Column="0" Width="20" Opacity=".7" Click="C1_Click"/>
+            <Button x:Name="C2" Grid.Column="1" Width="20" Opacity=".7" />
+            <Button x:Name="C3" Grid.Column="2" Width="20" Opacity=".7"/>
+            <Button x:Name="C4" Grid.Column="3" Width="20" Opacity=".7"/>
+            <Button x:Name="C5" Grid.Column="4" Width="20" Opacity=".7"/>
+            <Button x:Name="C6" Grid.Column="5" Width="20" Opacity=".7"/>
         </Grid>
-        <Label x:Name="PlayerOneStack" Content="Label" HorizontalAlignment="Left" Margin="26,63,0,0" VerticalAlignment="Top" Height="25" Width="100" Grid.RowSpan="2" RenderTransformOrigin="0.615,0.5"/>
-        <Label x:Name="PlayerTwoStack" Content="Label" HorizontalAlignment="Left" Margin="171,63,0,0" VerticalAlignment="Top" Height="25" Width="100" Grid.RowSpan="2" Grid.Column="1" RenderTransformOrigin="0.585,0.06"/>
+        <Grid HorizontalAlignment="Left" Height="84" Margin="26,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.547,0.068">
+            <Ellipse x:Name="Players" Width="40" Height="40" Stroke="Black"/>
+        </Grid>
+        <Button Content="New Game" HorizontalAlignment="Left" Margin="26,24,0,0" VerticalAlignment="Top" Width="74" Grid.Row="1"/>
     </Grid>
 </Controls:MetroWindow>
