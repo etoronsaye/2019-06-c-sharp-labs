@@ -19,10 +19,16 @@ namespace Connect4V3
     /// </summary>
     public partial class GameWindow : Window
     {
+        public string selectedplayer1 = (App.Current as App).player1;
+        public string selectedplayer2 = (App.Current as App).player2;
+
         public GameWindow()
         {
             InitializeComponent();
             this.DataContext = new Connect4Style();
+
+            PlayerOne.Content = selectedplayer1;
+            PlayerTwo.Content = selectedplayer2;
         }
 
         private void C1_Click(object sender, RoutedEventArgs e)

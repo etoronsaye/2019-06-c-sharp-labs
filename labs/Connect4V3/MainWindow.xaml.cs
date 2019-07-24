@@ -28,11 +28,32 @@ namespace Connect4V3
             InitializeComponent();
         }
 
+        void Initialise()
+        {
+            using(var db = new Connect4Entities())
+            {
+
+            }
+        }
+
         private void Start_Click(object sender, RoutedEventArgs e)
         {
             playerOne = P1.Text;
             playerTwo = P2.Text;
 
+            if(playerOne == "" || playerTwo == "")
+            {
+                MessageBox.Show("Please enter names!");
+            }
+            else
+            {
+                (App.Current as App).player1 = P1.Text.ToString();
+                (App.Current as App).player2 = P2.Text.ToString();
+                using(var db = new Connect4Entities())
+                {
+                  //db.Players;
+                }
+            }
             GameWindow gameWindow = new GameWindow();
             this.Close();
             gameWindow.Show();

@@ -41,8 +41,6 @@ namespace Connect4
             }*/
         }
 
-        
-
         void Initialise()
         {
            // SwapPlayer(1);

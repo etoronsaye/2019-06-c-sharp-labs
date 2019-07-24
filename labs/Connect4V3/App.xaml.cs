@@ -13,5 +13,7 @@ namespace Connect4V3
     /// </summary>
     public partial class App : Application
     {
+        public string player1 { get; set; }
+        public string player2 { get; set; }
     }
 }

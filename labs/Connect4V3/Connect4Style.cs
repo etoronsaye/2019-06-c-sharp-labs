@@ -27,7 +27,6 @@ namespace Connect4V3
             InitializeGame();
         }
 
-        //TODO: Refactor...move to a conversion class
         string ConvertChipToFillColor(Chips chips)
         {
             if (chips == Chips.Burlywood)

@@ -133,6 +133,27 @@
                 <Button x:Name="C7" Grid.Row="6" Grid.Column="6" Width="15" Height="30" Click="C7_Click" />
             </Grid>
         </DockPanel>
-        <Button Content="New Game" Command="{Binding StartGameCommand}" HorizontalAlignment="Left" Margin="52,60,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.11,-0.663"/>
+        <Button Content="New Game" Command="{Binding StartGameCommand}" HorizontalAlignment="Left" Margin="90,276,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.11,-0.663"/>
+        <Grid x:Name="LeaderBoard" Grid.Column="0" VerticalAlignment="Center" Margin="10,190,10,189">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="38*" />
+                <ColumnDefinition Width="23*"/>
+                <ColumnDefinition Width="61*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Label x:Name="PlayerOne" Content="helo" Grid.Row="0" Grid.Column="0" Width="100" Margin="11,-20,11,0" Grid.ColumnSpan="2"/>
+            <Label x:Name="PlayerTwo" Content="helo" Grid.Row="1" Grid.Column="0" Width="100" Margin="11,0,11,-16" Grid.ColumnSpan="2" />
+            <Label x:Name="PlayerOneScore" Content="Label" Grid.Row="0" Grid.Column="2" Height="20" Width="50" Margin="36,0"/>
+            <Label x:Name="PlayerTwoScore" Content="Label" Grid.Row="1" Grid.Column="2" Height="20" Width="50" Margin="36,0"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="84" Margin="0,126,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.547,0.068" Grid.Column="1">
+            <Ellipse x:Name="P1" Width="40" Height="40" Stroke="Black" Visibility="{Binding BurlyPlayersTurn}"/>
+            <Ellipse x:Name="P2" Width="40" Height="40" Stroke="Black" Visibility="{Binding GrayPlayersTurn}"/>
+        </Grid>
+        <Label Content="WINNER" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="BurlyPlayerWinner" Foreground="BurlyWood" Visibility="{Binding BurlyPlayerWins}" Margin="0,210,178,165" Grid.Column="1"/>
+        <Label Content="WINNER" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="GrayPlayerWinner" Foreground="Gray" Visibility="{Binding GrayPlayerWins}" Margin="0,210,178,165" RenderTransformOrigin="0.775,0.55" Grid.Column="1"/>
     </Grid>
 </Window>
