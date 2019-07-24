@@ -1,0 +1,138 @@
+﻿<Window x:Class="Connect4V3.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:Connect4V3"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Column="1" Grid.ColumnSpan="2">
+            <Grid x:Name="GameBoardGrid" Width="350" Height="300" Grid.Row="1" Grid.RowSpan="4" Grid.ColumnSpan="2" ShowGridLines="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Rectangle Grid.ColumnSpan="7" Fill="Honeydew" Height="300" Width="350" Grid.RowSpan="6" Stroke="Black"/>
+                <Ellipse x:Name="C00" Grid.Row="0" Grid.Column="0" Stroke="Black" Fill="{Binding BoardLocationColors[0]}" />
+                <Button Grid.Row="0" Grid.Column="0" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C01" Grid.Row="0" Grid.Column="1" Stroke="Black" Fill="{Binding BoardLocationColors[1]}" />
+                <Button Grid.Row="0" Grid.Column="1" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C02" Grid.Row="0" Grid.Column="2" Stroke="Black" Fill="{Binding BoardLocationColors[2]}" />
+                <Button Grid.Row="0" Grid.Column="2" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C03" Grid.Row="0" Grid.Column="3" Stroke="Black" Fill="{Binding BoardLocationColors[3]}"/>
+                <Button Grid.Row="0" Grid.Column="3" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C04" Grid.Row="0" Grid.Column="4" Stroke="Black" Fill="{Binding BoardLocationColors[4]}" />
+                <Button Grid.Row="0" Grid.Column="4" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C05" Grid.Row="0" Grid.Column="5" Stroke="Black" Fill="{Binding BoardLocationColors[5]}" />
+                <Button Grid.Row="0" Grid.Column="5" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C06" Grid.Row="0" Grid.Column="6" Stroke="Black" Fill="{Binding BoardLocationColors[6]}" />
+                <Button Grid.Row="0" Grid.Column="6" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+
+                <Ellipse x:Name="C10" Grid.Row="1" Grid.Column="0" Stroke="Black" Fill="{Binding BoardLocationColors[7]}" />
+                <Button Grid.Row="1" Grid.Column="0" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C11" Grid.Row="1" Grid.Column="1" Stroke="Black" Fill="{Binding BoardLocationColors[8]}" />
+                <Button Grid.Row="1" Grid.Column="1" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C12" Grid.Row="1" Grid.Column="2" Stroke="Black" Fill="{Binding BoardLocationColors[9]}" />
+                <Button Grid.Row="1" Grid.Column="2" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C13" Grid.Row="1" Grid.Column="3" Stroke="Black" Fill="{Binding BoardLocationColors[10]}" />
+                <Button Grid.Row="1" Grid.Column="3" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C14" Grid.Row="1" Grid.Column="4" Stroke="Black" Fill="{Binding BoardLocationColors[11]}" />
+                <Button Grid.Row="1" Grid.Column="4" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C15" Grid.Row="1" Grid.Column="5" Stroke="Black" Fill="{Binding BoardLocationColors[12]}" />
+                <Button Grid.Row="1" Grid.Column="5" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C16" Grid.Row="1" Grid.Column="6" Stroke="Black" Fill="{Binding BoardLocationColors[13]}" />
+                <Button Grid.Row="1" Grid.Column="6" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+
+                <Ellipse x:Name="C20" Grid.Row="2" Grid.Column="0" Stroke="Black" Fill="{Binding BoardLocationColors[14]}" />
+                <Button Grid.Row="2" Grid.Column="0" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C21" Grid.Row="2" Grid.Column="1" Stroke="Black" Fill="{Binding BoardLocationColors[15]}" />
+                <Button Grid.Row="2" Grid.Column="1" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C22" Grid.Row="2" Grid.Column="2" Stroke="Black" Fill="{Binding BoardLocationColors[16]}" />
+                <Button Grid.Row="2" Grid.Column="2" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C23" Grid.Row="2" Grid.Column="3" Stroke="Black" Fill="{Binding BoardLocationColors[17]}" />
+                <Button Grid.Row="2" Grid.Column="3" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C24" Grid.Row="2" Grid.Column="4" Stroke="Black" Fill="{Binding BoardLocationColors[18]}" />
+                <Button Grid.Row="2" Grid.Column="4" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C25" Grid.Row="2" Grid.Column="5" Stroke="Black" Fill="{Binding BoardLocationColors[19]}" />
+                <Button Grid.Row="2" Grid.Column="5" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C26" Grid.Row="2" Grid.Column="6" Stroke="Black" Fill="{Binding BoardLocationColors[20]}" />
+                <Button Grid.Row="2" Grid.Column="6" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+
+                <Ellipse x:Name="C30" Grid.Row="3" Grid.Column="0" Stroke="Black" Fill="{Binding BoardLocationColors[21]}" />
+                <Button Grid.Row="3" Grid.Column="0" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C31" Grid.Row="3" Grid.Column="1" Stroke="Black" Fill="{Binding BoardLocationColors[22]}" />
+                <Button Grid.Row="3" Grid.Column="1" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C32" Grid.Row="3" Grid.Column="2" Stroke="Black" Fill="{Binding BoardLocationColors[23]}" />
+                <Button Grid.Row="3" Grid.Column="2" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C33" Grid.Row="3" Grid.Column="3" Stroke="Black" Fill="{Binding BoardLocationColors[24]}" />
+                <Button Grid.Row="3" Grid.Column="3" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C34" Grid.Row="3" Grid.Column="4" Stroke="Black" Fill="{Binding BoardLocationColors[25]}" />
+                <Button Grid.Row="3" Grid.Column="4" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C35" Grid.Row="3" Grid.Column="5" Stroke="Black" Fill="{Binding BoardLocationColors[26]}" />
+                <Button Grid.Row="3" Grid.Column="5" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C36" Grid.Row="3" Grid.Column="6" Stroke="Black" Fill="{Binding BoardLocationColors[27]}" />
+                <Button Grid.Row="3" Grid.Column="6" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+
+                <Ellipse x:Name="C40" Grid.Row="4" Grid.Column="0" Stroke="Black" Fill="{Binding BoardLocationColors[28]}" />
+                <Button Grid.Row="4" Grid.Column="0" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C41" Grid.Row="4" Grid.Column="1" Stroke="Black" Fill="{Binding BoardLocationColors[29]}" />
+                <Button Grid.Row="4" Grid.Column="1" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C42" Grid.Row="4" Grid.Column="2" Stroke="Black" Fill="{Binding BoardLocationColors[30]}" />
+                <Button Grid.Row="4" Grid.Column="2" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C43" Grid.Row="4" Grid.Column="3" Stroke="Black" Fill="{Binding BoardLocationColors[31]}" />
+                <Button Grid.Row="4" Grid.Column="3" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C44" Grid.Row="4" Grid.Column="4" Stroke="Black" Fill="{Binding BoardLocationColors[32]}" />
+                <Button Grid.Row="4" Grid.Column="4" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C45" Grid.Row="4" Grid.Column="5" Stroke="Black" Fill="{Binding BoardLocationColors[33]}" />
+                <Button Grid.Row="4" Grid.Column="5" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C46" Grid.Row="4" Grid.Column="6" Stroke="Black" Fill="{Binding BoardLocationColors[34]}" />
+                <Button Grid.Row="4" Grid.Column="6" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+
+                <Ellipse x:Name="C50" Grid.Row="5" Grid.Column="0" Stroke="Black" Fill="{Binding BoardLocationColors[35]}" />
+                <Button Grid.Row="5" Grid.Column="0" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C51" Grid.Row="5" Grid.Column="1" Stroke="Black" Fill="{Binding BoardLocationColors[36]}" />
+                <Button Grid.Row="5" Grid.Column="1" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C52" Grid.Row="5" Grid.Column="2" Stroke="Black" Fill="{Binding BoardLocationColors[37]}" />
+                <Button Grid.Row="5" Grid.Column="2" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C53" Grid.Row="5" Grid.Column="3" Stroke="Black" Fill="{Binding BoardLocationColors[38]}" />
+                <Button Grid.Row="5" Grid.Column="3" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C54" Grid.Row="5" Grid.Column="4" Stroke="Black" Fill="{Binding BoardLocationColors[39]}" />
+                <Button Grid.Row="5" Grid.Column="4" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C55" Grid.Row="5" Grid.Column="5" Stroke="Black" Fill="{Binding BoardLocationColors[40]}" />
+                <Button Grid.Row="5" Grid.Column="5" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+                <Ellipse x:Name="C56" Grid.Row="5" Grid.Column="6" Stroke="Black" Fill="{Binding BoardLocationColors[41]}" />
+                <Button Grid.Row="5" Grid.Column="6" Opacity="0" IsEnabled="{Binding IsBoardEnabled}" Click="Button_Click" />
+
+                <Button x:Name="C1" Grid.Row="6" Grid.Column="0" Width="15" Height="30" Click="C1_Click"/>
+                <Button x:Name="C2" Grid.Row="6" Grid.Column="1" Width="15" Height="30" Click="C2_Click" />
+                <Button x:Name="C3" Grid.Row="6" Grid.Column="2" Width="15" Height="30" Click="C3_Click" />
+                <Button x:Name="C4" Grid.Row="6" Grid.Column="3" Width="15" Height="30" Click="C4_Click" />
+                <Button x:Name="C5" Grid.Row="6" Grid.Column="4" Width="15" Height="30" Click="C5_Click" />
+                <Button x:Name="C6" Grid.Row="6" Grid.Column="5" Width="15" Height="30" Click="C6_Click" />
+                <Button x:Name="C7" Grid.Row="6" Grid.Column="6" Width="15" Height="30" Click="C7_Click" />
+            </Grid>
+        </DockPanel>
+        <Button Content="New Game" Command="{Binding StartGameCommand}" HorizontalAlignment="Left" Margin="52,60,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.11,-0.663"/>
+    </Grid>
+</Window>

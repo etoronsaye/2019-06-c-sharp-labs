@@ -145,6 +145,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connect4", "Connect4\Connec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connect4V2", "Connect4V2\Connect4V2.csproj", "{D65A1EB6-8467-4975-8A17-990DC4DD6AB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connect4V3", "Connect4V3\Connect4V3.csproj", "{1904EDFA-8635-41A1-9572-989969E84A34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -435,6 +437,10 @@ Global
 		{D65A1EB6-8467-4975-8A17-990DC4DD6AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D65A1EB6-8467-4975-8A17-990DC4DD6AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D65A1EB6-8467-4975-8A17-990DC4DD6AB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1904EDFA-8635-41A1-9572-989969E84A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1904EDFA-8635-41A1-9572-989969E84A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1904EDFA-8635-41A1-9572-989969E84A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1904EDFA-8635-41A1-9572-989969E84A34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
