@@ -93,12 +93,12 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button x:Name="C1" Grid.Column="0" Width="20" Opacity=".7" Click="C1_Click" Margin="15,0" Grid.RowSpan="2"/>
-            <Button x:Name="C2" Grid.Column="1" Width="20" Opacity=".7" Click="C2_Click" Margin="15,0" Grid.RowSpan="2" />
+            <Button x:Name="C1" Grid.Column="0" Width="20" Opacity=".7" Margin="15,0" Grid.RowSpan="2" Click="C1_Click" />
+            <Button x:Name="C2" Grid.Column="1" Width="20" Opacity=".7" Margin="15,0" Grid.RowSpan="2" Click="C2_Click" />
             <Button x:Name="C3" Grid.Column="2" Width="20" Opacity=".7" Margin="15,0" Grid.RowSpan="2" Click="C3_Click" />
             <Button x:Name="C4" Grid.Column="3" Width="20" Opacity=".7" Margin="15,0" Grid.RowSpan="2" Click="C4_Click" />
-            <Button x:Name="C5" Grid.Column="4" Width="20" Opacity=".7" Margin="15,0" Grid.RowSpan="2" />
-            <Button x:Name="C6" Grid.Column="5" Width="20" Opacity=".7" Margin="15,0" Grid.RowSpan="2" />
+            <Button x:Name="C5" Grid.Column="4" Width="20" Opacity=".7" Margin="15,0" Grid.RowSpan="2" Click="C5_Click" />
+            <Button x:Name="C6" Grid.Column="5" Width="20" Opacity=".7" Margin="15,0" Grid.RowSpan="2" Height="40" VerticalAlignment="Top" Click="C6_Click" />
         </Grid>
         <Grid HorizontalAlignment="Left" Height="84" Margin="26,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.547,0.068">
             <Ellipse x:Name="Players" Width="40" Height="40" Stroke="Black"/>

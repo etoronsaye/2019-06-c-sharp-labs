@@ -133,15 +133,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snap_lab_04_SQL_Exam", "sna
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_54_Mah_App", "lab_54_Mah_App\lab_54_Mah_App.csproj", "{F6AE22B1-194A-4D5F-9DF0-9B9414750768}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snap_lab_05_rabbit_explosion", "snap_lab_05_rabbit_explosion\snap_lab_05_rabbit_explosion.csproj", "{4451625C-54CF-42DD-A6FB-414AF58EEE4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "snap_lab_05_rabbit_explosion", "snap_lab_05_rabbit_explosion\snap_lab_05_rabbit_explosion.csproj", "{4451625C-54CF-42DD-A6FB-414AF58EEE4B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_55_CSV_Word_Excel", "lab_55_CSV_Word_Excel\lab_55_CSV_Word_Excel.csproj", "{7C5A5825-9F20-4633-ABFD-856BF531325F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "snap_lab_17", "snap_lab_17\snap_lab_17.csproj", "{14E77800-F214-4BDC-853D-9AF95EB98E17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "snap_lab_17", "snap_lab_17\snap_lab_17.csproj", "{14E77800-F214-4BDC-853D-9AF95EB98E17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab_56_website_hello_world", "lab_56_website_hello_world\lab_56_website_hello_world.csproj", "{FFFD1FD3-EB1B-4EAA-804D-D3A40274F228}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab_56_website_hello_world", "lab_56_website_hello_world\lab_56_website_hello_world.csproj", "{FFFD1FD3-EB1B-4EAA-804D-D3A40274F228}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connect4", "Connect4\Connect4.csproj", "{B025BB76-009F-4EBE-8ED7-1E2343B6398A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connect4V2", "Connect4V2\Connect4V2.csproj", "{D65A1EB6-8467-4975-8A17-990DC4DD6AB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Connect4V3", "Connect4V3\Connect4V3.csproj", "{C7568162-28FF-4844-BAE7-01128BDE68A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -429,6 +433,14 @@ Global
 		{B025BB76-009F-4EBE-8ED7-1E2343B6398A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B025BB76-009F-4EBE-8ED7-1E2343B6398A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B025BB76-009F-4EBE-8ED7-1E2343B6398A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D65A1EB6-8467-4975-8A17-990DC4DD6AB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D65A1EB6-8467-4975-8A17-990DC4DD6AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D65A1EB6-8467-4975-8A17-990DC4DD6AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D65A1EB6-8467-4975-8A17-990DC4DD6AB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7568162-28FF-4844-BAE7-01128BDE68A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7568162-28FF-4844-BAE7-01128BDE68A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7568162-28FF-4844-BAE7-01128BDE68A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7568162-28FF-4844-BAE7-01128BDE68A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
