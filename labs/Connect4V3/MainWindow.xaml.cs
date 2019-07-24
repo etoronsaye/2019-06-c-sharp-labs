@@ -28,14 +28,6 @@ namespace Connect4V3
             InitializeComponent();
         }
 
-        void Initialise()
-        {
-            using(var db = new Connect4Entities())
-            {
-
-            }
-        }
-
         private void Start_Click(object sender, RoutedEventArgs e)
         {
             playerOne = P1.Text;
@@ -49,9 +41,19 @@ namespace Connect4V3
             {
                 (App.Current as App).player1 = P1.Text.ToString();
                 (App.Current as App).player2 = P2.Text.ToString();
-                using(var db = new Connect4Entities())
+                using(var db = new Connect4Entities1())
                 {
-                  //db.Players;
+                    Player newPlayer = new Player();
+                    Player newPlayer2 = new Player();
+                    newPlayer.Name = playerOne;
+                    newPlayer.Wins = 0;
+                    newPlayer.Losses = 0;
+                    newPlayer2.Name = playerTwo;
+                    newPlayer2.Wins = 0;
+                    newPlayer2.Losses = 0;
+                    db.Players.Add(newPlayer);
+                    db.Players.Add(newPlayer2);
+                    db.SaveChanges();
                 }
             }
             GameWindow gameWindow = new GameWindow();

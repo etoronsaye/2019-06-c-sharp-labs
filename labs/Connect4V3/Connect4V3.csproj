@@ -170,19 +170,19 @@
     <Resource Include="Resources\Entypo-license.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Connect4.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Connect4.Context.cs</LastGenOutput>
       <DependentUpon>Connect4.edmx</DependentUpon>
+      <LastGenOutput>Connect4.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Connect4.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Connect4.edmx</DependentUpon>
       <LastGenOutput>Connect4.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

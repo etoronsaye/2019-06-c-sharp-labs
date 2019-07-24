@@ -10,7 +10,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Wins" Type="int" />
           <Property Name="Losses" Type="int" />
         </EntityType>
@@ -27,11 +27,11 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Wins" Type="Int32" />
           <Property Name="Losses" Type="Int32" />
         </EntityType>
-        <EntityContainer Name="Connect4Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Connect4Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Players" EntityType="Self.Player" />
         </EntityContainer>
       </Schema>
@@ -39,7 +39,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Connect4ModelStoreContainer" CdmEntityContainer="Connect4Entities">
+        <EntityContainerMapping StorageEntityContainer="Connect4ModelStoreContainer" CdmEntityContainer="Connect4Entities1">
           <EntitySetMapping Name="Players">
             <EntityTypeMapping TypeName="Connect4Model.Player">
               <MappingFragment StoreEntitySet="Players">

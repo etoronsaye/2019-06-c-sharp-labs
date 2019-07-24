@@ -13,10 +13,10 @@ namespace Connect4V3
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Connect4Entities : DbContext
+    public partial class Connect4Entities1 : DbContext
     {
-        public Connect4Entities()
-            : base("name=Connect4Entities")
+        public Connect4Entities1()
+            : base("name=Connect4Entities1")
         {
         }
     

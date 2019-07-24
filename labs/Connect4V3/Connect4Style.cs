@@ -135,8 +135,6 @@ namespace Connect4V3
             }           
             BurlyPlayerWins = chips == Chips.Burlywood ? "Visible" : "Hidden";
             GrayPlayerWins = chips == Chips.Gray ? "Visible" : "Hidden";
-            //BurlyPlayersTurn = "Hidden";
-            //GrayPlayersTurn = "Hidden";
             IsBoardEnabled = "False";
         }
 
@@ -155,7 +153,7 @@ namespace Connect4V3
             var chipWasPlaced = gameBoard.PlayChips(CurrentPlayerChip, (int)column + 1);
             if (chipWasPlaced)
             {
-                var index = gameBoard.LastPositionPlayedAsOrderedIndex();
+                var index = gameBoard.LastPositionPlayedOrdered();
                 boardLocationColors[index] = ConvertChipToFillColor(CurrentPlayerChip);
                 if (!gameBoard.Winner())
                 {

@@ -21,16 +21,26 @@ namespace Connect4V3
     {
         public string selectedplayer1 = (App.Current as App).player1;
         public string selectedplayer2 = (App.Current as App).player2;
+        static List<Player> Scores = new List<Player>();
 
         public GameWindow()
         {
             InitializeComponent();
+            Initialise();
             this.DataContext = new Connect4Style();
 
             PlayerOne.Content = selectedplayer1;
             PlayerTwo.Content = selectedplayer2;
         }
-
+        void Initialise()
+        {
+            using (var db = new Connect4Entities1())
+            {
+                Scores = db.Players.ToList();
+                PlayerOneScore.Text = Scores[0].Wins.ToString();
+                PlayerTwoScore.Text = Scores[0].Wins.ToString();
+            }
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var button = sender as Button;
@@ -50,8 +60,9 @@ namespace Connect4V3
         {
             if (BurlyPlayerWinner.IsEnabled == true && Connect4Style.CanIncreaseBurlyScore == true)
             {
-                p1Count++;
+                p1Count++;           
                 PlayerOneScore.Text = p1Count.ToString();
+                
             }
 
             if (GrayPlayerWinner.IsInitialized == true && Connect4Style.CanIncreaseGrayScore == true)

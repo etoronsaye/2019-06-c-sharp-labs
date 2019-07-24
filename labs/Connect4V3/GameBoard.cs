@@ -71,7 +71,7 @@ namespace Connect4V3
             get { return board.Values.All(d => d == Chips.Empty); }
         }
 
-        public int LastPositionPlayedAsOrderedIndex()
+        public int LastPositionPlayedOrdered()
         {
             return board.Keys.OrderBy(k => k.Row).ThenBy(k => k.Column).ToList().IndexOf(LastPositionPlayed);
         }
