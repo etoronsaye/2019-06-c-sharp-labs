@@ -31,43 +31,39 @@ namespace Connect4V3
             PlayerTwo.Content = selectedplayer2;
         }
 
-        private void C1_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void C2_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void C3_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void C4_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void C5_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void C6_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void C7_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var button = sender as Button;
+
             if (button != null)
             {
                 int column = (int)button.GetValue(Grid.ColumnProperty);
                 (DataContext as Connect4Style).PlayChips.Execute(column);
+                UpdateScores();
             }
+        }
+
+        int p1Count = 0;
+        int p2Count = 0;
+        
+        public void UpdateScores()
+        {
+            if (BurlyPlayerWinner.IsEnabled == true && Connect4Style.CanIncreaseBurlyScore == true)
+            {
+                p1Count++;
+                PlayerOneScore.Text = p1Count.ToString();
+            }
+
+            if (GrayPlayerWinner.IsInitialized == true && Connect4Style.CanIncreaseGrayScore == true)
+            {
+                p2Count++;
+                PlayerTwoScore.Text = p2Count.ToString();
+            }
+        }
+
+        private void NewGame_Click(object sender, RoutedEventArgs e)
+        {
+            this.DataContext = new Connect4Style();
         }
     }
 }

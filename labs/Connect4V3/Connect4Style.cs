@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
+
 namespace Connect4V3
 {
     class Connect4Style : ChangeNotification
@@ -14,18 +15,21 @@ namespace Connect4V3
         readonly ICommand playChips;
         GameBoard gameBoard;
         ObservableCollection<string> boardLocationColors;
-        string burlyPlayersTurn;
-        string grayPlayersTurn;
+        //string burlyPlayersTurn;
+        //string grayPlayersTurn;
         string burlyPlayerWins;
         string grayPlayerWins;
         string isBoardEnabled;
 
         public Connect4Style()
-        {
+        { 
             startGame = new Command(this.InitializeGame);
             playChips = new Command(this.PlayChip);
             InitializeGame();
         }
+
+        public static bool CanIncreaseBurlyScore = false;
+        public static bool CanIncreaseGrayScore = false;
 
         string ConvertChipToFillColor(Chips chips)
         {
@@ -46,13 +50,15 @@ namespace Connect4V3
             gameBoard.Initialize();
             BoardLocationColors = new ObservableCollection<string>
               (Enumerable.Repeat<string>("AliceBlue", GameBoard.MaxRow * GameBoard.MaxColumn));
-            BurlyPlayersTurn = "Visible";
-            GrayPlayersTurn = "Hidden";
+            //BurlyPlayersTurn = "Visible";
+            //GrayPlayersTurn = "Hidden";
             BurlyPlayerWins = "Hidden";
             GrayPlayerWins = "Hidden";
             CurrentPlayerChip = Chips.Burlywood;
             IsBoardEnabled = "True";
-        }
+            CanIncreaseBurlyScore = false;
+            CanIncreaseGrayScore = false;
+    }
 
         public ICommand StartGame { get { return startGame; } }
         public ICommand PlayChips { get { return playChips; } }
@@ -67,7 +73,7 @@ namespace Connect4V3
             }
         }
 
-        public string BurlyPlayersTurn
+        /*public string BurlyPlayersTurn
         {
             get { return burlyPlayersTurn; }
             private set
@@ -85,7 +91,7 @@ namespace Connect4V3
                 grayPlayersTurn = value;
                 FirePropertyChanged("GrayPlayersTurn");
             }
-        }
+        }*/
 
         public string BurlyPlayerWins
         {
@@ -119,17 +125,25 @@ namespace Connect4V3
 
         void DeclareWinner(Chips chips)
         {
+            if(CurrentPlayerChip == Chips.Burlywood)
+            {
+                CanIncreaseBurlyScore = true;
+            }
+            if(CurrentPlayerChip == Chips.Gray)
+            {
+                CanIncreaseGrayScore = true;
+            }           
             BurlyPlayerWins = chips == Chips.Burlywood ? "Visible" : "Hidden";
             GrayPlayerWins = chips == Chips.Gray ? "Visible" : "Hidden";
-            BurlyPlayersTurn = "Hidden";
-            GrayPlayersTurn = "Hidden";
+            //BurlyPlayersTurn = "Hidden";
+            //GrayPlayersTurn = "Hidden";
             IsBoardEnabled = "False";
         }
 
         void SwitchTurn(Chips chips)
         {
-            GrayPlayersTurn = chips == Chips.Burlywood ? "Visible" : "Hidden";
-            BurlyPlayersTurn = chips == Chips.Gray ? "Visible" : "Hidden";
+            //GrayPlayersTurn = chips == Chips.Burlywood ? "Visible" : "Hidden";
+            //BurlyPlayersTurn = chips == Chips.Gray ? "Visible" : "Hidden";
             CurrentPlayerChip = chips == Chips.Burlywood ? Chips.Gray : Chips.Burlywood;
         }
 
@@ -152,6 +166,6 @@ namespace Connect4V3
                     DeclareWinner(CurrentPlayerChip);
                 }
             }
-        }
+        }       
     }
 }

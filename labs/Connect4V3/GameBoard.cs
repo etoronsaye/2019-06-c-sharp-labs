@@ -76,16 +76,106 @@ namespace Connect4V3
             return board.Keys.OrderBy(k => k.Row).ThenBy(k => k.Column).ToList().IndexOf(LastPositionPlayed);
         }
 
-        public bool Winner()
+        bool HorizontalWins(Position position, Chips chips)
         {
-            if (HorizontalWins(lastPositionPlayed, board[lastPositionPlayed])) return true;
-            if (NortWestSouthEastDiagonalWins(lastPositionPlayed, board[lastPositionPlayed])) return true;
-            if (VerticalWins(lastPositionPlayed, board[lastPositionPlayed])) return true;
-            if (NorthEastSouthWestDiagonalWins(lastPositionPlayed, board[lastPositionPlayed])) return true;
-            return false;
-        }
+            var contiguousChips = 0;
+            var column = position.Column + 1;
 
-        bool NorthEastSouthWestDiagonalWins(Position lastPositionPlayed, Chips chips)
+            //check right.
+            while (column <= MaxColumn)
+            {
+                var loc = new Position(position.Row, column);
+                if (board[loc] == chips)
+                {
+                    contiguousChips++;
+                    column++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            //check left.
+            column = position.Column - 1;
+            while (column >= 1)
+            {
+                var loc = new Position(position.Row, column);
+                if (board[loc] == chips)
+                {
+                    contiguousChips++;
+                    column--;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return contiguousChips >= 3;
+        }
+        bool VerticalWins(Position position, Chips chips)
+        {
+            var contiguousChips = 0;
+            var row = position.Row + 1;
+
+            //check down.
+            while (row <= MaxRow)
+            {
+                var loc = new Position(row, position.Column);
+                if (board[loc] == chips)
+                {
+                    contiguousChips++;
+                    row++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return contiguousChips >= 3;
+        }
+        bool LeftRightDiagonalWins(Position lastPositionPlayed, Chips chips)
+        {
+            var contiguousChips = 0;
+            var row = lastPositionPlayed.Row - 1;
+            var column = lastPositionPlayed.Column - 1;
+
+            //check north west.
+            while (row >= 1 && column >= 1)
+            {
+                var loc = new Position(row, column);
+                if (board[loc] == chips)
+                {
+                    contiguousChips++;
+                    column--;
+                    row--;
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+            row = lastPositionPlayed.Row + 1;
+            column = lastPositionPlayed.Column + 1;
+            //check south east
+            while (row <= MaxRow && column <= MaxColumn)
+            {
+                var loc = new Position(row, column);
+                if (board[loc] == chips)
+                {
+                    contiguousChips++;
+                    column++;
+                    row++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            return contiguousChips >= 3;
+        }
+        bool RightLeftDiagonalWins(Position lastPositionPlayed, Chips chips)
         {
             var contiguousChips = 0;
 
@@ -129,106 +219,15 @@ namespace Connect4V3
             return contiguousChips >= 3;
         }
 
-        bool NortWestSouthEastDiagonalWins(Position lastPositionPlayed, Chips chips)
+        public bool Winner()
         {
-            var contiguousChips = 0;
-            var row = lastPositionPlayed.Row - 1;
-            var column = lastPositionPlayed.Column - 1;
+            if (HorizontalWins(lastPositionPlayed, board[lastPositionPlayed])) return true;           
+            if (VerticalWins(lastPositionPlayed, board[lastPositionPlayed])) return true;
+            if (LeftRightDiagonalWins(lastPositionPlayed, board[lastPositionPlayed])) return true;
+            if (RightLeftDiagonalWins(lastPositionPlayed, board[lastPositionPlayed])) return true;
+            return false;
 
-            //check north west.
-            while (row >= 1 && column >= 1)
-            {
-                var loc = new Position(row, column);
-                if (board[loc] == chips)
-                {
-                    contiguousChips++;
-                    column--;
-                    row--;
-                }
-                else
-                {
-                    break;
-                }
-            }
-
-            row = lastPositionPlayed.Row + 1;
-            column = lastPositionPlayed.Column + 1;
-            //check south east
-            while (row <= MaxRow && column <= MaxColumn)
-            {
-                var loc = new Position(row, column);
-                if (board[loc] == chips)
-                {
-                    contiguousChips++;
-                    column++;
-                    row++;
-                }
-                else
-                {
-                    break;
-                }
-            }
-            return contiguousChips >= 3;
         }
 
-        bool HorizontalWins(Position position, Chips chips)
-        {
-            var contiguousChips = 0;
-            var column = position.Column + 1;
-
-            //check right.
-            while (column <= MaxColumn)
-            {
-                var loc = new Position(position.Row, column);
-                if (board[loc] == chips)
-                {
-                    contiguousChips++;
-                    column++;
-                }
-                else
-                {
-                    break;
-                }
-            }
-
-            //check left.
-            column = position.Column - 1;
-            while (column >= 1)
-            {
-                var loc = new Position(position.Row, column);
-                if (board[loc] == chips)
-                {
-                    contiguousChips++;
-                    column--;
-                }
-                else
-                {
-                    break;
-                }
-            }
-            return contiguousChips >= 3;
-        }
-
-        bool VerticalWins(Position position, Chips chips)
-        {
-            var contiguousChips = 0;
-            var row = position.Row + 1;
-
-            //check down.
-            while (row <= MaxRow)
-            {
-                var loc = new Position(row, position.Column);
-                if (board[loc] == chips)
-                {
-                    contiguousChips++;
-                    row++;
-                }
-                else
-                {
-                    break;
-                }
-            }
-            return contiguousChips >= 3;
-        }
     }
 }
