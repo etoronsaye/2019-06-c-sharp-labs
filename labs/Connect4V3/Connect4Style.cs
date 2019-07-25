@@ -15,8 +15,6 @@ namespace Connect4V3
         readonly ICommand playChips;
         GameBoard gameBoard;
         ObservableCollection<string> boardLocationColors;
-        //string burlyPlayersTurn;
-        //string grayPlayersTurn;
         string burlyPlayerWins;
         string grayPlayerWins;
         string isBoardEnabled;
@@ -140,8 +138,6 @@ namespace Connect4V3
 
         void SwitchTurn(Chips chips)
         {
-            //GrayPlayersTurn = chips == Chips.Burlywood ? "Visible" : "Hidden";
-            //BurlyPlayersTurn = chips == Chips.Gray ? "Visible" : "Hidden";
             CurrentPlayerChip = chips == Chips.Burlywood ? Chips.Gray : Chips.Burlywood;
         }
 

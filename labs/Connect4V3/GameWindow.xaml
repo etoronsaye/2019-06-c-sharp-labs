@@ -150,8 +150,8 @@
             <TextBlock x:Name="PlayerTwoScore" Grid.Row="1" Grid.Column="2" Height="25" Width="50" Margin="36,0"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="84" Margin="0,126,0,0" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.547,0.068" Grid.Column="1">
-            <Ellipse x:Name="P1" Width="40" Height="40" Stroke="Black" Visibility="{Binding BurlyPlayersTurn}"/>
-            <Ellipse x:Name="P2" Width="40" Height="40" Stroke="Black" Visibility="{Binding GrayPlayersTurn}"/>
+            <Ellipse x:Name="P1" Width="40" Height="40" Fill="BlanchedAlmond"  Stroke="Black" Visibility="Visible"/>
+            <Ellipse x:Name="P2" Width="40" Height="40" Fill="Gray" Stroke="Black" Visibility="Hidden"/>
         </Grid>
         <Label Name="BurlyPlayerWinner" Content="WINNER" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="BurlyWood"  Visibility="{Binding BurlyPlayerWins}" Margin="0,210,178,165" Grid.Column="1"/>
         <Label Name="GrayPlayerWinner" Content="WINNER" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Gray" Visibility="{Binding GrayPlayerWins}" Margin="0,210,178,165" RenderTransformOrigin="0.775,0.55" Grid.Column="1"/>
