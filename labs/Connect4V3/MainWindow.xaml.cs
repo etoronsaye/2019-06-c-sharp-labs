@@ -24,7 +24,7 @@ namespace Connect4V3
         string playerTwo = "";
         List<Player> players;
         public MainWindow()
-        {
+        { 
             InitializeComponent();
             Initialise();
         }
@@ -33,7 +33,8 @@ namespace Connect4V3
         {
             using (var db = new Connect4Entities1())
             {
-                 players = db.Players.ToList();
+                Leaderboard.ItemsSource = null;
+                players = db.Players.OrderByDescending(w => w.Wins).ToList();
             }
             Leaderboard.DisplayMemberPath = "Name";
             //Leaderboard.DisplayMemberPath = "Wins";
