@@ -22,12 +22,24 @@ namespace Connect4V3
     {
         string playerOne = "";
         string playerTwo = "";
-
+        List<Player> players;
         public MainWindow()
         {
             InitializeComponent();
+            Initialise();
         }
 
+        void Initialise()
+        {
+            using (var db = new Connect4Entities1())
+            {
+                 players = db.Players.ToList();
+            }
+            Leaderboard.DisplayMemberPath = "Name";
+            //Leaderboard.DisplayMemberPath = "Wins";
+            //ListBoxCustomers.ItemsSource = customers;
+            Leaderboard.ItemsSource = players;
+        }
         private void Start_Click(object sender, RoutedEventArgs e)
         {
             playerOne = P1.Text;
@@ -59,6 +71,11 @@ namespace Connect4V3
             GameWindow gameWindow = new GameWindow();
             this.Close();
             gameWindow.Show();
+        }
+
+        private void Leaderboard_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
