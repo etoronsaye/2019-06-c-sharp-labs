@@ -43,7 +43,6 @@ namespace Connect4V3
 
         public bool PlayChips(Chips chips, int column)
         {
-            if (column > MaxColumn || column < 1) throw new ArgumentException(String.Format("Column must be between 1 and {0}", MaxColumn));
             int row = MaxRow;
             while (row > 0 && board[new Position(row, column)] != Chips.Empty)
             {
@@ -81,7 +80,7 @@ namespace Connect4V3
             var nearByChips = 0;
             var column = position.Column + 1;
 
-            //check right.
+            // right.
             while (column <= MaxColumn)
             {
                 var pos = new Position(position.Row, column);
@@ -96,7 +95,7 @@ namespace Connect4V3
                 }
             }
 
-            //check left.
+            // left.
             column = position.Column - 1;
             while (column >= 1)
             {
@@ -118,7 +117,7 @@ namespace Connect4V3
             var nearByChips = 0;
             var row = position.Row + 1;
 
-            //check down.
+            // down.
             while (row <= MaxRow)
             {
                 var pos = new Position(row, position.Column);
@@ -140,7 +139,7 @@ namespace Connect4V3
             var row = lastPositionPlayed.Row - 1;
             var column = lastPositionPlayed.Column - 1;
 
-            //check north west.
+            // left
             while (row >= 1 && column >= 1)
             {
                 var pos = new Position(row, column);
@@ -158,7 +157,7 @@ namespace Connect4V3
 
             row = lastPositionPlayed.Row + 1;
             column = lastPositionPlayed.Column + 1;
-            //check south east
+            // right
             while (row <= MaxRow && column <= MaxColumn)
             {
                 var pos = new Position(row, column);
@@ -182,7 +181,7 @@ namespace Connect4V3
             var row = lastPositionPlayed.Row - 1; ;
             var column = lastPositionPlayed.Column + 1;
 
-            //check north east.
+            // right
             while (row >= 1 && column <= MaxColumn)
             {
                 var pos = new Position(row, column);
@@ -201,7 +200,7 @@ namespace Connect4V3
 
             row = lastPositionPlayed.Row + 1;
             column = lastPositionPlayed.Column - 1;
-            //check south west
+            // left
             while (row <= MaxRow && column >= 1)
             {
                 var pos = new Position(row, column);

@@ -48,8 +48,6 @@ namespace Connect4V3
             gameBoard.Initialize();
             BoardLocationColors = new ObservableCollection<string>
               (Enumerable.Repeat<string>("AliceBlue", GameBoard.MaxRow * GameBoard.MaxColumn));
-            //BurlyPlayersTurn = "Visible";
-            //GrayPlayersTurn = "Hidden";
             BurlyPlayerWins = "Hidden";
             GrayPlayerWins = "Hidden";
             CurrentPlayerChip = Chips.Burlywood;
@@ -70,26 +68,6 @@ namespace Connect4V3
                 FirePropertyChanged("BoardLocationColors");
             }
         }
-
-        /*public string BurlyPlayersTurn
-        {
-            get { return burlyPlayersTurn; }
-            private set
-            {
-                burlyPlayersTurn = value;
-                FirePropertyChanged("BurlyPlayersTurn");
-            }
-        }
-
-        public string GrayPlayersTurn
-        {
-            get { return grayPlayersTurn; }
-            private set
-            {
-                grayPlayersTurn = value;
-                FirePropertyChanged("GrayPlayersTurn");
-            }
-        }*/
 
         public string BurlyPlayerWins
         {
@@ -145,7 +123,6 @@ namespace Connect4V3
 
         void PlayChip(object column)
         {
-            //gameboard columns are not zero based
             var chipWasPlaced = gameBoard.PlayChips(CurrentPlayerChip, (int)column + 1);
             if (chipWasPlaced)
             {
@@ -154,7 +131,7 @@ namespace Connect4V3
                 if (!gameBoard.Winner())
                 {
                     SwitchTurn(CurrentPlayerChip);
-                }
+                } 
                 else
                 {
                     DeclareWinner(CurrentPlayerChip);

@@ -28,9 +28,8 @@
             <DataGrid x:Name="Leaderboard" Grid.Row="1" Grid.Column="2" Grid.RowSpan="3" x:FieldModifier="public" AutoGenerateColumns="False" ColumnWidth="*" SelectionChanged="Leaderboard_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
-                    <DataGridTextColumn Header="Wins" Binding="{Binding Wins}"/>                    
+                    <DataGridTextColumn Header="Wins" Binding="{Binding Wins}"/>
                 </DataGrid.Columns>
-                
             </DataGrid>
         </Grid>
     </Grid>

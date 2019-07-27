@@ -62,7 +62,6 @@ namespace Connect4V3
         }
         public virtual void DoExecute(object param)
         {
-            //  Call
             InvokeAction(param);
         }
     }
