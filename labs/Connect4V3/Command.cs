@@ -15,13 +15,13 @@ namespace Connect4V3
             this.canExecute = canExecute;
         }
 
-        public Command(Action<object> parameterizedAction, bool canExecute = true)
+        public Command(Action<object> executedAction, bool canExecute = true)
         {
-            this.parameterizedAction = parameterizedAction;
+            this.executedAction = executedAction;
             this.canExecute = canExecute;
         }
         protected Action action = null;
-        protected Action<object> parameterizedAction = null;
+        protected Action<object> executedAction = null;
         private bool canExecute = false;
 
         public bool CanExecute
@@ -54,15 +54,15 @@ namespace Connect4V3
         protected void InvokeAction(object param)
         {
             Action theAction = action;
-            Action<object> theParameterizedAction = parameterizedAction;
+            Action<object> theexecutedAction = executedAction;
             if (theAction != null)
                 theAction();
-            else if (theParameterizedAction != null)
-                theParameterizedAction(param);
+            else if (theexecutedAction != null)
+                theexecutedAction(param);
         }
         public virtual void DoExecute(object param)
         {
-            //  Call the action or the parameterized action, whichever has been set.
+            //  Call
             InvokeAction(param);
         }
     }

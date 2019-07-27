@@ -78,16 +78,16 @@ namespace Connect4V3
 
         bool HorizontalWins(Position position, Chips chips)
         {
-            var contiguousChips = 0;
+            var nearByChips = 0;
             var column = position.Column + 1;
 
             //check right.
             while (column <= MaxColumn)
             {
-                var loc = new Position(position.Row, column);
-                if (board[loc] == chips)
+                var pos = new Position(position.Row, column);
+                if (board[pos] == chips)
                 {
-                    contiguousChips++;
+                    nearByChips++;
                     column++;
                 }
                 else
@@ -100,10 +100,10 @@ namespace Connect4V3
             column = position.Column - 1;
             while (column >= 1)
             {
-                var loc = new Position(position.Row, column);
-                if (board[loc] == chips)
+                var pos = new Position(position.Row, column);
+                if (board[pos] == chips)
                 {
-                    contiguousChips++;
+                    nearByChips++;
                     column--;
                 }
                 else
@@ -111,20 +111,20 @@ namespace Connect4V3
                     break;
                 }
             }
-            return contiguousChips >= 3;
+            return nearByChips >= 3;
         }
         bool VerticalWins(Position position, Chips chips)
         {
-            var contiguousChips = 0;
+            var nearByChips = 0;
             var row = position.Row + 1;
 
             //check down.
             while (row <= MaxRow)
             {
-                var loc = new Position(row, position.Column);
-                if (board[loc] == chips)
+                var pos = new Position(row, position.Column);
+                if (board[pos] == chips)
                 {
-                    contiguousChips++;
+                    nearByChips++;
                     row++;
                 }
                 else
@@ -132,21 +132,21 @@ namespace Connect4V3
                     break;
                 }
             }
-            return contiguousChips >= 3;
+            return nearByChips >= 3;
         }
         bool LeftRightDiagonalWins(Position lastPositionPlayed, Chips chips)
         {
-            var contiguousChips = 0;
+            var nearByChips = 0;
             var row = lastPositionPlayed.Row - 1;
             var column = lastPositionPlayed.Column - 1;
 
             //check north west.
             while (row >= 1 && column >= 1)
             {
-                var loc = new Position(row, column);
-                if (board[loc] == chips)
+                var pos = new Position(row, column);
+                if (board[pos] == chips)
                 {
-                    contiguousChips++;
+                    nearByChips++;
                     column--;
                     row--;
                 }
@@ -161,10 +161,10 @@ namespace Connect4V3
             //check south east
             while (row <= MaxRow && column <= MaxColumn)
             {
-                var loc = new Position(row, column);
-                if (board[loc] == chips)
+                var pos = new Position(row, column);
+                if (board[pos] == chips)
                 {
-                    contiguousChips++;
+                    nearByChips++;
                     column++;
                     row++;
                 }
@@ -173,11 +173,11 @@ namespace Connect4V3
                     break;
                 }
             }
-            return contiguousChips >= 3;
+            return nearByChips >= 3;
         }
         bool RightLeftDiagonalWins(Position lastPositionPlayed, Chips chips)
         {
-            var contiguousChips = 0;
+            var nearByChips = 0;
 
             var row = lastPositionPlayed.Row - 1; ;
             var column = lastPositionPlayed.Column + 1;
@@ -185,11 +185,11 @@ namespace Connect4V3
             //check north east.
             while (row >= 1 && column <= MaxColumn)
             {
-                var loc = new Position(row, column);
-                if (board[loc] != chips) break;
-                if (board[loc] == chips)
+                var pos = new Position(row, column);
+                if (board[pos] != chips) break;
+                if (board[pos] == chips)
                 {
-                    contiguousChips++;
+                    nearByChips++;
                     column++;
                     row--;
                 }
@@ -204,10 +204,10 @@ namespace Connect4V3
             //check south west
             while (row <= MaxRow && column >= 1)
             {
-                var loc = new Position(row, column);
-                if (board[loc] == chips)
+                var pos = new Position(row, column);
+                if (board[pos] == chips)
                 {
-                    contiguousChips++;
+                    nearByChips++;
                     column--;
                     row++;
                 }
@@ -216,7 +216,7 @@ namespace Connect4V3
                     break;
                 }
             }
-            return contiguousChips >= 3;
+            return nearByChips >= 3;
         }
 
         public bool Winner()

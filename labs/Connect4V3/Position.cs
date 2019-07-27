@@ -16,10 +16,10 @@ namespace Connect4V3
         public int Column { get; set; }
         public int Row { get; set; }
 
-        public override string ToString()
+        /*public override string ToString()
         {
             return "Column: " + Column + " Row: " + Row;
-        }
+        }*/
 
         public override bool Equals(object obj)
         {
@@ -27,7 +27,7 @@ namespace Connect4V3
             if (that == null) return false;
             return this.Column == that.Column && this.Row == that.Row;
         }
-
+        
         public override int GetHashCode()
         {
             return Column.GetHashCode() + Row.GetHashCode();

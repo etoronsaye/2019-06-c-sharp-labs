@@ -29,7 +29,7 @@ namespace Connect4V3
         public static bool CanIncreaseBurlyScore = false;
         public static bool CanIncreaseGrayScore = false;
 
-        string ConvertChipToFillColor(Chips chips)
+        string ConvertChipColor(Chips chips)
         {
             if (chips == Chips.Burlywood)
             {
@@ -150,7 +150,7 @@ namespace Connect4V3
             if (chipWasPlaced)
             {
                 var index = gameBoard.LastPositionPlayedOrdered();
-                boardLocationColors[index] = ConvertChipToFillColor(CurrentPlayerChip);
+                boardLocationColors[index] = ConvertChipColor(CurrentPlayerChip);
                 if (!gameBoard.Winner())
                 {
                     SwitchTurn(CurrentPlayerChip);
