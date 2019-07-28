@@ -133,7 +133,6 @@ namespace Connect4
             }
             counterC1++;
         }
-
         private void C2_Click(object sender, RoutedEventArgs e)
         {
             Button c2 = (Button)sender;
@@ -212,20 +211,317 @@ namespace Connect4
             }
             counterC2++;
         }
-
         private void C3_Click(object sender, RoutedEventArgs e)
         {
+            Button c3 = (Button)sender;
 
+            if (counterC3 == 0)
+            {
+                if (turn)
+                {
+                    C3P1.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C3P1.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC3 == 1)
+            {
+                if (turn)
+                {
+                    C3P2.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C3P2.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC3 == 2)
+            {
+                if (turn)
+                {
+                    C3P3.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C3P3.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC3 == 3)
+            {
+                if (turn)
+                {
+                    C3P4.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C3P4.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC3 == 4)
+            {
+                if (turn)
+                {
+                    C3P5.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C3P5.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC3 == 5)
+            {
+                if (turn)
+                {
+                    C3P6.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C3P6.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            counterC3++;
         }
-
         private void C4_Click(object sender, RoutedEventArgs e)
         {
+            Button c4 = (Button)sender;
 
+            if (counterC4 == 0)
+            {
+                if (turn)
+                {
+                    C4P1.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C4P1.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC4 == 1)
+            {
+                if (turn)
+                {
+                    C4P2.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C4P2.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC4 == 2)
+            {
+                if (turn)
+                {
+                    C4P3.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C4P3.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC4 == 3)
+            {
+                if (turn)
+                {
+                    C4P4.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C4P4.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC4 == 4)
+            {
+                if (turn)
+                {
+                    C4P5.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C4P5.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC4 == 5)
+            {
+                if (turn)
+                {
+                    C4P6.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C4P6.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            counterC4++;
         }
-
         private void C5_Click(object sender, RoutedEventArgs e)
         {
+            Button c5 = (Button)sender;
 
+            if (counterC5 == 0)
+            {
+                if (turn)
+                {
+                    C5P1.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C5P1.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC5 == 1)
+            {
+                if (turn)
+                {
+                    C5P2.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C5P2.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC5 == 2)
+            {
+                if (turn)
+                {
+                    C5P3.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C5P3.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC5 == 3)
+            {
+                if (turn)
+                {
+                    C5P4.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C5P4.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC5 == 4)
+            {
+                if (turn)
+                {
+                    C5P5.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C5P5.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC5 == 5)
+            {
+                if (turn)
+                {
+                    C5P6.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C5P6.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            counterC5++;
+        }
+        private void C6_Click(object sender, RoutedEventArgs e)
+        {
+            Button c6 = (Button)sender;
+
+            if (counterC6 == 0)
+            {
+                if (turn)
+                {
+                    C6P1.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C6P1.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC6 == 1)
+            {
+                if (turn)
+                {
+                    C6P2.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C6P2.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC6 == 2)
+            {
+                if (turn)
+                {
+                    C6P3.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C6P3.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC6 == 3)
+            {
+                if (turn)
+                {
+                    C6P4.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C6P4.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC6 == 4)
+            {
+                if (turn)
+                {
+                    C6P5.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C6P5.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            if (counterC6 == 5)
+            {
+                if (turn)
+                {
+                    C6P6.Fill = Brushes.BlanchedAlmond;
+                }
+                else
+                {
+                    C6P6.Fill = Brushes.LightGray;
+                }
+                turn = !turn;
+            }
+            counterC6++;
         }
     }
 }
