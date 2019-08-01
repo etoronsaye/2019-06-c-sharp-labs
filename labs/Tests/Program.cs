@@ -317,6 +317,24 @@ namespace Tests
             }
             return result;
         }
+
+        public static int[] Array_Sorting(int[] dogArray)
+        {
+            int temp;
+            for (int d = 0; d <= dogArray.Length - 2; d++)
+            {
+                for (int i = 0; i <= dogArray.Length - 2; i++)
+                {
+                    if (dogArray[i].CompareTo(dogArray[i + 1]) == -1)
+                    {
+                        temp = dogArray[i + 1];
+                        dogArray[i + 1] = dogArray[i];
+                        dogArray[i] = temp;
+                    }
+                }
+            }
+            return dogArray;
+        }
     }
     // Create a Cat class with string Name and int Age.Have a Constructor.
     public class Cat

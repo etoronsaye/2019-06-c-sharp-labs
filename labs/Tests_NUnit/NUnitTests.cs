@@ -121,5 +121,14 @@ namespace Tests
             var actual = Eng35Tests.Loop_Dictionary(arr);
             Assert.AreEqual(expected, actual);
         }
+
+        [TestCase(new int[] { 20, 30, 40}, new int[] { 40, 30, 20 })]
+        [TestCase(new int[] { 30, 40, 20}, new int[] { 40, 30, 20 })]
+        [TestCase(new int[] { 40, 20, 30}, new int[] { 40, 30, 20 })]
+        public void Array_Sort(int[] arr, int[] expected)
+        {
+            var actual = Eng35Tests.Array_Sorting(arr);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
