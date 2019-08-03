@@ -1,6 +1,20 @@
 # 2019-06-c-sharp-labs
 Lab work done during C# class June 2019
 
+# Main
+
+## Sub
+
+### Sub sub
+```
+```
+```cs
+```
+*italic
+**bold
+***bolditalic
+> several lines quote other work
+<img src="">
 
 # Connect 4
 
